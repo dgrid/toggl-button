@@ -7,6 +7,7 @@ togglbutton.render('table.work-package-table tbody tr td.id:not(.toggl)', {obser
   var link,
     container = elem,
     description = $('span[data-field-name="subject"]', elem.parentNode).textContent.trim(),
+    description = description + "[#"+elem.firstChild.firstChild.title + "]",
     projectName = $('#projects-menu').title.trim();
 
   link = togglbutton.createTimerLink({
